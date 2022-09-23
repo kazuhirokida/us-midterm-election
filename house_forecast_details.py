@@ -14,4 +14,4 @@ df = pd.read_csv('https://github.com/kazuhirokida/us-midterm-election/raw/main/u
 
 df = pd.concat([df,row.set_index('date').drop(['id','year','type','name','link','sort','description','copyright'],axis=1)].astype(int)).drop_duplicates()
 
-df.to_csv('us_midterm_house_forecast_details.csv',index=False)
+df.to_csv('us_midterm_house_forecast_details.csv')
