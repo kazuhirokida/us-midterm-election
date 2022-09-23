@@ -6,7 +6,7 @@ data = requests.get('https://www.realclearpolitics.com/epolls/json/48_map.js').j
 
 row = pd.Series(data['election']['module_info']).to_frame().T
 
-row.to_csv('data/'+datetime.today().strftime('%Y-%m-%d')+'us_midterm_house_forecast_details.csv',index=False)
+row.to_csv('data/'+datetime.today().strftime('%Y-%m-%d')+'_us_midterm_house_forecast_details.csv',index=False)
 
 row['date'] = pd.to_datetime(row.lastBuildDate,format='%a, %d %b %Y %H:%M:%S %z',utc=True).dt.date
 
