@@ -10,7 +10,7 @@ row.to_csv('data/'+datetime.today().strftime('%Y-%m-%d')+'_us_midterm_house_fore
 
 row['date'] = pd.to_datetime(row.lastBuildDate,format='%a, %d %b %Y %H:%M:%S %z',utc=True).dt.date
 
-df = pd.read_csv('https://github.com/kazuhirokida/us-midterm-election/raw/main/us_midterm_house_details.csv')
+df = pd.read_csv('https://github.com/kazuhirokida/us-midterm-election/raw/main/us_midterm_house_forecast_details.csv')
 
 df = pd.concat([df,row]).drop_duplicates()
 
